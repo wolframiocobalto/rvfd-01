@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 95.08,
+      "attrs": { "env": "micropython-20220117-v1.18" }
+    },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 35.61,
+      "left": -98.42,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "ntc1:GND", "pico:GND.1", "black", [ "h10.91", "v-28.16", "h42.52" ] ],
+    [ "ntc1:VCC", "pico:3V3", "red", [ "h39.26", "v-90.32", "h130.52", "v53.15" ] ],
+    [ "ntc1:OUT", "pico:GP28", "green", [ "h26.86", "v-109.47", "h157.09", "v108.67" ] ]
+  ]
+}
